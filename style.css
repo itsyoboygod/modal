@@ -1,0 +1,154 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    min-height: 100vh;
+    font-size: 3rem;
+    container-type: inline-size;
+
+}
+
+main button{
+    display: flex;
+    border-radius: 50%;
+    margin: 2px;
+    padding: 2px;
+    outline: solid 3px grey;
+    outline-offset: -6px;
+    border: none;
+    text-decoration: none;
+    background: lightgrey;
+    justify-content: center;
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+
+}
+
+main button a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    height: 30px;
+}
+
+.maingrid{
+    display: grid;
+    grid-template-areas: 'x t x' 'l c r' 'x b x';
+    grid-template-columns: 1fr 10fr 1fr;
+    height: -webkit-fill-available;
+    align-content: space-between;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background-color: transparent
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: lightgray;
+    border-radius: 10px;
+  }
+
+  
+.maingrid > *{
+    display: flex;
+    min-width: -webkit-fill-available;
+    justify-content: center;
+    align-items: center;
+    outline: solid 1px transparent;
+}
+
+.l, .c, .r{
+    align-items: center;
+}
+
+.tl, .tr, .bl, .br{
+    width: 80px;
+    height: 80px;
+}
+
+.t, .b{
+    height: 80px;
+}
+
+.c{
+    overflow-y: scroll;
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    place-content: flex-start;
+}
+
+.maingrid p{
+    margin: 0;
+    padding: 0;
+}
+
+.bl, .b, .br{
+    bottom: 0;
+}
+
+#popup{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: hsla(0, 0%, 0%, 0.75);
+    display: none;
+    backdrop-filter: blur(3px);
+    transition: .2s;
+}
+
+/* input{
+    -webkit-appearance: none;
+    visibility: hidden;
+    display: none;
+} */
+
+#check:checked ~ main{
+    transform: scale(1.2);
+}
+
+#popup .popup-content{
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: 0px 0px 250px 10px var(--purple);
+    background-color: hsla(0,0%,100%,.3);
+    outline: 0px solid var(--white, 0.1);
+    inset: 50px;
+}
+
+#popup a.close-popup{
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 3rem;
+    line-height: 80px;
+    color: var(--black);
+    height: 80px;
+    width: -webkit-fill-available;
+    text-align: center;
+}
+
+#popup a.close-popup:hover{
+    cursor: pointer;
+    transition: .5s;
+    opacity: .5;
+}
+
+#popup:target{
+    display: block;
+    z-index: 3;
+    inset: auto 0 0 0;
+}
+
+.close-popup>*{
+    font-size: 2rem;
+}
