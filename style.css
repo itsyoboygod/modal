@@ -1,6 +1,7 @@
 body{
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 main{
@@ -45,6 +46,7 @@ main button a{
     grid-template-columns: 1fr 10fr 1fr;
     height: -webkit-fill-available;
     align-content: space-between;
+    gap: .2rem;
 }
 
 ::-webkit-scrollbar {
@@ -65,7 +67,26 @@ main button a{
     justify-content: center;
     align-items: center;
     outline: solid 1px transparent;
+    background-color: darkgrey;
 }
+
+.tl{
+    border-top-left-radius: 10px;
+}
+
+
+.tr{
+    border-top-right-radius: 10px;
+}
+
+.bl{
+    border-bottom-left-radius: 10px;
+}
+
+.br{
+    border-bottom-right-radius: 10px;
+}
+
 
 .l, .c, .r{
     align-items: center;
@@ -74,6 +95,35 @@ main button a{
 .tl, .tr, .bl, .br{
     width: 80px;
     height: 80px;
+}
+
+.t{
+    display: flex;
+    justify-content: start;
+    gap: .5rem;
+    font-size: 1rem !important;
+}
+
+.t li, .l li{
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.l{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: .5rem;
+}
+
+.l li{
+    writing-mode: vertical-lr;
+}
+
+.t > *{
+    margin: 0 10px;
 }
 
 .t, .b{
@@ -86,6 +136,27 @@ main button a{
     height: auto;
     flex-direction: column;
     place-content: flex-start;
+    font-size: 2rem;
+    padding: 10px;
+}
+
+.r{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.r > *{
+    writing-mode: vertical-lr;
+}
+
+.r a{
+    text-align: center;
+}
+
+.r a:first-child{
+    border-top: solid 3px rgba(0, 0, 0, 0.7);
+    border-bottom: solid 3px rgba(0, 0, 0, 0.7);
 }
 
 .maingrid p{
@@ -121,7 +192,8 @@ main button a{
     position: absolute;
     border-radius: 10px;
     box-shadow: 0px 0px 250px 10px var(--purple);
-    background-color: hsla(0,0%,100%,.3);
+    /* background-color: hsla(0,0%,100%,.3); */
+    background-color: rgba(0, 0, 0, 0.3);
     outline: 0px solid var(--white, 0.1);
     inset: 50px;
 }
@@ -142,6 +214,25 @@ main button a{
     transition: .5s;
     opacity: .5;
 }
+
+.up-arrow-modal, .down-arrow-modal{
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 3rem;
+    line-height: 80px;
+    color: var(--black);
+    height: 80px;
+    width: -webkit-fill-available;
+    text-align: center;
+}
+
+
+.up-arrow-modal:hover, .down-arrow-modal:hover{
+    cursor: pointer;
+    transition: .5s;
+    opacity: .5;
+}
+
 
 #popup:target{
     display: block;
