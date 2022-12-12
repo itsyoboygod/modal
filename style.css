@@ -340,7 +340,7 @@ main button a{
     height: 1.5rem;
     outline: 3px solid var(--radio-color, currentColor);
     outline-offset: 3px;
-    border-radius: 50%;
+    /* border-radius: 50%; */
 }
 
 .color-picker input[type="radio"]:hover{
@@ -359,14 +359,27 @@ form input[value]{
 input[type="radio"]#light{
     position: absolute;
     left: 0.2rem;
-    --radio-color: var(--grey)
+    --radio-color: var(--grey);
+    width: 4rem;
+    height: 4rem;
+    outline: 3px solid white;
+    outline-offset: -3px;
+    clip-path: polygon(0% 0%, 0% 100%, 100% 0%);
+    border-top-left-radius: 10%;
 }
 
 input[type="radio"]#dark{
     position: absolute;
-    right: .3rem;
-    bottom: .5rem;
-    --radio-color: var(--white)
+    right: 0.3rem;
+    bottom: 0.5rem;
+    --radio-color: var(--white);
+    width: 4rem;
+    height: 4rem;
+    outline: 3px solid black;
+    outline-offset: -3px;
+    clip-path: polygon(0% 0%, 0% 100%, 100% 0%);
+    border-top-left-radius: 10%;
+    transform: rotate(180deg);
 }
 
 input[type="radio"]#purple{
