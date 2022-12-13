@@ -65,9 +65,10 @@ main button a{
     display: grid;
     grid-template-areas: 'x t x' 'l c r' 'x b x';
     grid-template-columns: 0fr 1fr 0fr;
+    grid-template-rows: 0fr 1fr 0fr;
     height: -webkit-fill-available;
     align-content: space-between;
-    gap: .2rem;
+    gap: .05rem;
 }
 
 ::-webkit-scrollbar {
@@ -89,6 +90,7 @@ main button a{
     align-items: center;
     outline: solid 1px transparent;
     background-color: var(--color-block-bg);
+    transition: .5s ease;
 }
 
 .tl{
@@ -140,6 +142,10 @@ main button a{
     justify-content: flex-end;
 }
 
+.tabs{
+    display: flex;
+}
+
 .t li{
     height: 80px;
     width: auto;
@@ -155,7 +161,8 @@ main button a{
     padding: 0;
     margin: 0;
     width: auto;
-    height: 30px;
+    height: 25px;
+    border-bottom: solid 2px;
 }
 
 .l li{
@@ -180,7 +187,13 @@ main button a{
     margin: 0;
     width: 40px;
     height: 90px;
+    border-left: solid 2px;
 }
+
+.info-tab-btn{
+    text-decoration: none;
+}
+
 
 .t > * {
     margin: 0 10px !important;
@@ -198,6 +211,7 @@ main button a{
     place-content: flex-start;
     font-size: 2rem;
     padding: 30px;
+    transition: .5s ease;
 }
 
 .r{
@@ -211,12 +225,11 @@ main button a{
 }
 
 .r a{
-    text-align: center;
 }
 
 .r a:first-child{
-    border-top: solid 4px var(--color-right-arrows);
-    border-bottom: solid 4px var(--color-right-arrows);
+    border-top: solid 1px var(--color-right-arrows);
+    border-bottom: solid 1px var(--color-right-arrows);
 }
 
 .maingrid p{
@@ -276,8 +289,8 @@ main button a{
 .up-arrow-modal, .down-arrow-modal{
     font-weight: 600;
     text-decoration: none;
-    font-size: 3rem;
-    line-height: 80px;
+    font-size: 5rem;
+    line-height: 95px;
     color: var(--color-tabs-text);
     height: 80px;
     width: -webkit-fill-available;
@@ -340,7 +353,6 @@ main button a{
     height: 1.5rem;
     outline: 3px solid var(--radio-color, currentColor);
     outline-offset: 3px;
-    /* border-radius: 50%; */
 }
 
 .color-picker input[type="radio"]:hover{
@@ -352,38 +364,61 @@ main button a{
 }
 
 form input[value]{
-    font-size: 10rem;
-    /* font-size: var(--range); */
 }
 
 input[type="radio"]#light{
     position: absolute;
-    left: 0.2rem;
+    left: 0rem;
     --radio-color: var(--grey);
-    width: 4rem;
-    height: 4rem;
-    outline: 3px solid white;
-    outline-offset: -3px;
+    width: 5rem;
+    height: 5rem;
+    top: 0;
+    padding: 0;
+    margin: 0;
     clip-path: polygon(0% 0%, 0% 100%, 100% 0%);
     border-top-left-radius: 10%;
+    transition: .5s ease;
+}
+
+input[type="radio"]#light::after{
+    content: '☀';
+    position: absolute;
+    display: flex;
+    left: 10px;
+    top: 8px;
+    font-size: 2rem;
+    height: 30px;
+    align-items: center;
+    color:  var(--white);
+    transition: .5s ease;
 }
 
 input[type="radio"]#dark{
     position: absolute;
-    right: 0.3rem;
-    bottom: 0.5rem;
-    --radio-color: var(--white);
-    width: 4rem;
-    height: 4rem;
-    outline: 3px solid black;
-    outline-offset: -3px;
+    right: 0rem;
+    bottom: 0rem;
+    --radio-color: var(--black);
+    width: 5rem;
+    height: 5rem;
+    padding: 0;
+    margin: 0;
     clip-path: polygon(0% 0%, 0% 100%, 100% 0%);
     border-top-left-radius: 10%;
     transform: rotate(180deg);
+    transition: .5s ease;
 }
 
-input[type="radio"]#purple{
-    --radio-color: var(--purple)
+input[type="radio"]#dark::after{
+    content: '☾';
+    position: absolute;
+    display: flex;
+    left: 10px;
+    top: 8px;
+    font-size: 2rem;
+    align-items: center;
+    height: 30px;
+    color:  var(--white);
+    transition: .5s ease;
 }
 
 :root:has(#light:checked){
@@ -392,9 +427,9 @@ input[type="radio"]#purple{
     --color-block-bg:var(--darkgrey);
     --color-txt:var(--black);
     --color-outline: var(--transparent);
-    --radio-color: var(--purple);
     --color-tabs-text: var(--black);
-    transition: 3s;
+    --radio-color: var(--black);
+    transition: .5s ease;
 }
 
 :root:has(#dark:checked){
@@ -404,5 +439,5 @@ input[type="radio"]#purple{
     --color-outline: var(--white);
     --radio-color: var(--white);
     --color-tabs-text: var(--white);
-    transition: 3s;
+    transition: .5s ease;
 }
