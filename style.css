@@ -142,10 +142,6 @@ main button a{
     justify-content: flex-end;
 }
 
-.tabs{
-    display: flex;
-}
-
 .t li{
     height: 80px;
     width: auto;
