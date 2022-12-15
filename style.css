@@ -186,6 +186,33 @@ main button a{
     border-left: solid 2px;
 }
 
+main .maingrid .l li button{
+    transform: rotate(90deg);
+    font-size: 1rem;
+  
+    display: flex;
+    border-radius: 0 !important;
+    margin: 10px;
+    padding: 10px;
+    outline: none !important;
+    outline-offset: 0 !important;
+    border: none;
+    text-decoration: none;
+    background: transparent;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    align-items: center;
+
+}
+
+.gi-tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+  }
+
 .info-tab-btn{
     text-decoration: none;
 }

@@ -39,17 +39,20 @@
 
                     <div class="l">
                         <li>
-                            <a href="#first-c-section" class="info-tab-btn">General Information</a>
+                            <!-- <a href="#first-c-section" class="info-tab-btn">General Information</a> -->
+                            <button onclick="openInfo(event, 'gi-tab1')" class="g-tablinks">General Information</button>
                         </li>
                         <li>
-                            <a href="#first-c-section" class="info-tab-btn">Technical Information</a>
+                            <!-- <a href="#first-c-section" class="info-tab-btn">Technical Information</a> -->
+                            <button onclick="openInfo(event, 'gi-tab2')" class="g-tablinks">Technical Information</button>
                         </li>
                         <li>
-                            <a href="#first-c-section" class="info-tab-btn">Cientific Information</a>
+                            <!-- <a href="#first-c-section" class="info-tab-btn">Cientific Information</a> -->
+                            <button onclick="openInfo(event, 'gi-tab3')" class="g-tablinks">Cientific Information</button>
                         </li>
                     </div>
                     <div class="c">
-                        <section id="first-c-section">
+                        <!-- <section id="first-c-section">
                             <p>
                                 What is Lorem Ipsum?
                                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -113,7 +116,46 @@
                                 Lorem Ipsum passages, and more recently with desktop publishing software like
                                 Aldus PageMaker including versions of Lorem Ipsum.
                             </p>
-                        </section>
+                        </section> -->
+
+
+                        <div id="gi-tab1" class="gi-tabcontent">
+                            <h1>General Information Tab#1</h1>
+                        </div>
+    
+                        <div id="gi-tab2" class="gi-tabcontent">
+                            <h1>General Information Tab#2</h1>
+                        </div>
+    
+                        <div id="gi-tab3" class="gi-tabcontent">
+                            <h1>General Information Tab#3</h1>
+                        </div>
+
+
+                        <div id="ti-tab1" class="ti-tabcontent">
+                            <h1>Technical Information Tab#1</h1>
+                        </div>
+    
+                        <div id="ti-tab2" class="ti-tabcontent">
+                            <h1>Technical Information Tab#2</h1>
+                        </div>
+    
+                        <div id="ti-tab3" class="ti-tabcontent">
+                            <h1>Technical Information Tab#3</h1>
+                        </div>
+
+                        <div id="ci-tab1" class="ci-tabcontent">
+                            <h1>Cientific Information Tab#1</h1>
+                        </div>
+    
+                        <div id="ci-tab2" class="ci-tabcontent">
+                            <h1>Cientific Information Tab#2</h1>
+                        </div>
+    
+                        <div id="ci-tab3" class="ci-tabcontent">
+                            <h1>Cientific Information Tab#3</h1>
+                        </div>
+
                     </div>
                     <div class="r">
                         <a href="#first-c-section" class="up-arrow-modal">&#8249;</a>
@@ -141,6 +183,24 @@
                 <a href="#popup" class="close-popup">?</a>
             </button></h1>
     </main>
+
+
+    <script>
+        function openInfo(evt, tabName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("gi-tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("g-tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(tabName).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+        </script>
+
 </body>
 
 </html>
