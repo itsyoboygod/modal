@@ -24,13 +24,16 @@
                     </div>
                     <div class="t">
                         <li>
-                            <a href="#first-c-section" class="info-tab-btn">tab1</a>
+                            <!-- <a href="#first-c-section" class="info-tab-btn">tab1</a> -->
+                            <button onclick="openInfo(event, 'gi-tab1')" class="g-tablinks">tab1</button>
                         </li>
                         <li>
-                            <a href="#first-c-section" class="info-tab-btn">tab2</a>
+                            <!-- <a href="#first-c-section" class="info-tab-btn">tab2</a> -->
+                            <button onclick="openInfo(event, 'gi-tab2')" class="g-tablinks">tab2</button>
                         </li>
                         <li>
-                            <a href="#first-c-section" class="info-tab-btn">tab3</a>
+                            <!-- <a href="#first-c-section" class="info-tab-btn">tab3</a> -->
+                            <button onclick="openInfo(event, 'gi-tab3')" class="g-tablinks">tab3</button>
                         </li>
                     </div>
                     <div class="tr">
@@ -39,16 +42,16 @@
 
                     <div class="l">
                         <li>
-                            <!-- <a href="#first-c-section" class="info-tab-btn">General Information</a> -->
-                            <button onclick="openInfo(event, 'gi-tab1')" class="g-tablinks">General Information</button>
+                            <a href="#first-c-section" class="info-tab-btn">General Information</a>
+                            <!-- <button onclick="openInfo(event, 'gi-tab1')" class="g-tablinks">General Information</button> -->
                         </li>
                         <li>
-                            <!-- <a href="#first-c-section" class="info-tab-btn">Technical Information</a> -->
-                            <button onclick="openInfo(event, 'gi-tab2')" class="g-tablinks">Technical Information</button>
+                            <a href="#first-c-section" class="info-tab-btn">Technical Information</a>
+                            <!-- <button onclick="openInfo(event, 'gi-tab2')" class="g-tablinks">Technical Information</button> -->
                         </li>
                         <li>
-                            <!-- <a href="#first-c-section" class="info-tab-btn">Cientific Information</a> -->
-                            <button onclick="openInfo(event, 'gi-tab3')" class="g-tablinks">Cientific Information</button>
+                            <a href="#first-c-section" class="info-tab-btn">Cientific Information</a>
+                            <!-- <button onclick="openInfo(event, 'gi-tab3')" class="g-tablinks">Cientific Information</button> -->
                         </li>
                     </div>
                     <div class="c">
@@ -187,10 +190,24 @@
 
     <script>
         function openInfo(evt, tabName) {
-          var i, tabcontent, tablinks;
-          tabcontent = document.getElementsByClassName("gi-tabcontent");
-          for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
+          var i, gi_tabcontent, ti_tabcontent, ci_tabcontent, tablinks;
+          gi_tabcontent = document.getElementsByClassName("gi-tabcontent");
+          ci_tabcontent = document.getElementsByClassName("ti-tabcontent");
+          ti_tabcontent = document.getElementsByClassName("ci-tabcontent");
+          for (i = 0; i < gi_tabcontent.length; i++) {
+            gi_tabcontent[i].style.display = "none";
+            ti_tabcontent[i].style.display = "none";
+            ci_tabcontent[i].style.display = "none";
+          }
+          for (i = 0; i < ti_tabcontent.length; i++) {
+            gi_tabcontent[i].style.display = "none";
+            ti_tabcontent[i].style.display = "none";
+            ci_tabcontent[i].style.display = "none";
+          }
+          for (i = 0; i < ci_tabcontent.length; i++) {
+            gi_tabcontent[i].style.display = "none";
+            ti_tabcontent[i].style.display = "none";
+            ci_tabcontent[i].style.display = "none";
           }
           tablinks = document.getElementsByClassName("g-tablinks");
           for (i = 0; i < tablinks.length; i++) {
