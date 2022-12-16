@@ -23,36 +23,65 @@
                         </form>
                     </div>
                     <div class="t">
-                        <li>
-                            <!-- <a href="#first-c-section" class="info-tab-btn">tab1</a> -->
-                            <button onclick="openInfo(event, 'gi-tab1')" class="g-tablinks">tab1</button>
-                        </li>
-                        <li>
-                            <!-- <a href="#first-c-section" class="info-tab-btn">tab2</a> -->
-                            <button onclick="openInfo(event, 'gi-tab2')" class="g-tablinks">tab2</button>
-                        </li>
-                        <li>
-                            <!-- <a href="#first-c-section" class="info-tab-btn">tab3</a> -->
-                            <button onclick="openInfo(event, 'gi-tab3')" class="g-tablinks">tab3</button>
-                        </li>
+                        <ul id="ul-general" class="ulst">
+                            <li>
+                                <!-- <a href="#first-c-section" class="info-tab-btn">tab1</a> -->
+                                <button onclick="openInfo(event, 'gi-tab1')" class="tablinks">gi-tab1</button>
+                            </li>
+                            <li>
+                                <button onclick="openInfo(event, 'gi-tab2')" class="tablinks">gi-tab2</button>
+
+                            </li>
+                            <li>
+                                <button onclick="openInfo(event, 'gi-tab3')" class="tablinks">gi-tab3</button>
+                            </li>
+                        </ul>
+                        <ul id="ul-technical" class="ulst">
+                            <li>
+                                <!-- <a href="#first-c-section" class="info-tab-btn">tab2</a> -->
+                                <button onclick="openInfo(event, 'ti-tab1')" class="tablinks">ti-tab1</button>
+                            </li>
+                            <li>
+                                <button onclick="openInfo(event, 'ti-tab2')" class="tablinks">ti-tab2</button>
+                            </li>
+                            <li>
+                                <button onclick="openInfo(event, 'ti-tab3')" class="tablinks">ti-tab3</button>
+                            </li>
+                        </ul>
+                        <ul id="ul-cientific" class="ulst">
+                            <li>
+                                <!-- <a href="#first-c-section" class="info-tab-btn">tab3</a> -->
+                                <button onclick="openInfo(event, 'ci-tab1')" class="tablinks">ci-tab1</button>
+                            <li>
+                            <li>
+                                <button onclick="openInfo(event, 'ci-tab2')" class="tablinks">ci-tab2</button>
+                            </li>
+                            <li>
+                                <button onclick="openInfo(event, 'ci-tab3')" class="tablinks">ci-tab3</button>
+                            </li>
+                        </ul>
                     </div>
                     <div class="tr">
                         <a href="#" class="close-popup">&times;</a>
                     </div>
-
                     <div class="l">
-                        <li>
-                            <a href="#first-c-section" class="info-tab-btn">General Information</a>
-                            <!-- <button onclick="openInfo(event, 'gi-tab1')" class="g-tablinks">General Information</button> -->
-                        </li>
-                        <li>
-                            <a href="#first-c-section" class="info-tab-btn">Technical Information</a>
-                            <!-- <button onclick="openInfo(event, 'gi-tab2')" class="g-tablinks">Technical Information</button> -->
-                        </li>
-                        <li>
-                            <a href="#first-c-section" class="info-tab-btn">Cientific Information</a>
-                            <!-- <button onclick="openInfo(event, 'gi-tab3')" class="g-tablinks">Cientific Information</button> -->
-                        </li>
+                        <ul class="ulsl">
+                            <li>
+                                <!-- <a href="#first-c-section" class="info-tab-btn">General Information</a> -->
+                                <button onclick="openInfo(event, 'gi-tab')" class="tablinks">General
+                                    Information</button>
+                            </li>
+                            <li>
+                                <!-- <a href="#first-c-section" class="info-tab-btn">Technical Information</a> -->
+                                <button onclick="openInfo(event, 'ti-tab')" class="tablinks">Technical
+                                    Information</button>
+                            </li>
+                            <li>
+                                <!-- <a href="#first-c-section" class="info-tab-btn">Cientific Information</a> -->
+                                <button onclick="openInfo(event, 'ci-tab')" class="tablinks">Cientific
+                                    Information</button>
+                            </li>
+                        </ul>
                     </div>
                     <div class="c">
                         <!-- <section id="first-c-section">
@@ -122,40 +151,40 @@
                         </section> -->
 
 
-                        <div id="gi-tab1" class="gi-tabcontent">
+                        <div id="gi-tab1" class="tabcontent">
                             <h1>General Information Tab#1</h1>
                         </div>
-    
-                        <div id="gi-tab2" class="gi-tabcontent">
+
+                        <div id="gi-tab2" class="tabcontent">
                             <h1>General Information Tab#2</h1>
                         </div>
-    
-                        <div id="gi-tab3" class="gi-tabcontent">
+
+                        <div id="gi-tab3" class="tabcontent">
                             <h1>General Information Tab#3</h1>
                         </div>
 
 
-                        <div id="ti-tab1" class="ti-tabcontent">
+                        <div id="ti-tab1" class="tabcontent">
                             <h1>Technical Information Tab#1</h1>
                         </div>
-    
-                        <div id="ti-tab2" class="ti-tabcontent">
+
+                        <div id="ti-tab2" class="tabcontent">
                             <h1>Technical Information Tab#2</h1>
                         </div>
-    
-                        <div id="ti-tab3" class="ti-tabcontent">
+
+                        <div id="ti-tab3" class="tabcontent">
                             <h1>Technical Information Tab#3</h1>
                         </div>
 
-                        <div id="ci-tab1" class="ci-tabcontent">
+                        <div id="ci-tab1" class="tabcontent">
                             <h1>Cientific Information Tab#1</h1>
                         </div>
-    
-                        <div id="ci-tab2" class="ci-tabcontent">
+
+                        <div id="ci-tab2" class="tabcontent">
                             <h1>Cientific Information Tab#2</h1>
                         </div>
-    
-                        <div id="ci-tab3" class="ci-tabcontent">
+
+                        <div id="ci-tab3" class="tabcontent">
                             <h1>Cientific Information Tab#3</h1>
                         </div>
 
@@ -187,36 +216,22 @@
             </button></h1>
     </main>
 
-
     <script>
-        function openInfo(evt, tabName) {
-          var i, gi_tabcontent, ti_tabcontent, ci_tabcontent, tablinks;
-          gi_tabcontent = document.getElementsByClassName("gi-tabcontent");
-          ci_tabcontent = document.getElementsByClassName("ti-tabcontent");
-          ti_tabcontent = document.getElementsByClassName("ci-tabcontent");
-          for (i = 0; i < gi_tabcontent.length; i++) {
-            gi_tabcontent[i].style.display = "none";
-            ti_tabcontent[i].style.display = "none";
-            ci_tabcontent[i].style.display = "none";
-          }
-          for (i = 0; i < ti_tabcontent.length; i++) {
-            gi_tabcontent[i].style.display = "none";
-            ti_tabcontent[i].style.display = "none";
-            ci_tabcontent[i].style.display = "none";
-          }
-          for (i = 0; i < ci_tabcontent.length; i++) {
-            gi_tabcontent[i].style.display = "none";
-            ti_tabcontent[i].style.display = "none";
-            ci_tabcontent[i].style.display = "none";
-          }
-          tablinks = document.getElementsByClassName("g-tablinks");
-          for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-          }
-          document.getElementById(tabName).style.display = "block";
-          evt.currentTarget.className += " active";
+        function openInfo(evt, infoName) {
+            var i, tabcontent, tablinks, ulst;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            ulst = document.getElementsByClassName("ulst");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(infoName).style.display = "block";
+            evt.currentTarget.className += " active";
         }
-        </script>
+    </script>
 
 </body>
 
