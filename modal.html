@@ -23,7 +23,7 @@
                         </form>
                     </div>
                     <div class="t">
-                        <ul id="ul-general" class="ulst">
+                        <ul id="ul-general" class="ulst" data-tabt="tabst">
                             <li>
                                 <!-- <a href="#first-c-section" class="info-tab-btn">tab1</a> -->
                                 <button onclick="openInfo(event, 'gi-tab1')" class="tablinks">gi-tab1</button>
@@ -36,7 +36,7 @@
                                 <button onclick="openInfo(event, 'gi-tab3')" class="tablinks">gi-tab3</button>
                             </li>
                         </ul>
-                        <ul id="ul-technical" class="ulst">
+                        <ul id="ul-technical" class="ulst" data-tabt="tabst">
                             <li>
                                 <!-- <a href="#first-c-section" class="info-tab-btn">tab2</a> -->
                                 <button onclick="openInfo(event, 'ti-tab1')" class="tablinks">ti-tab1</button>
@@ -48,7 +48,7 @@
                                 <button onclick="openInfo(event, 'ti-tab3')" class="tablinks">ti-tab3</button>
                             </li>
                         </ul>
-                        <ul id="ul-cientific" class="ulst">
+                        <ul id="ul-cientific" class="ulst" data-tabt="tabst">
                             <li>
                                 <!-- <a href="#first-c-section" class="info-tab-btn">tab3</a> -->
                                 <button onclick="openInfo(event, 'ci-tab1')" class="tablinks">ci-tab1</button>
@@ -68,17 +68,17 @@
                         <ul class="ulsl">
                             <li>
                                 <!-- <a href="#first-c-section" class="info-tab-btn">General Information</a> -->
-                                <button onclick="openInfo(event, 'gi-tab')" class="tablinks">General
+                                <button onclick="openInfoTabs(event, 'gi-tab')" class="tablinksl">General
                                     Information</button>
                             </li>
                             <li>
                                 <!-- <a href="#first-c-section" class="info-tab-btn">Technical Information</a> -->
-                                <button onclick="openInfo(event, 'ti-tab')" class="tablinks">Technical
+                                <button onclick="openInfoTabs(event, 'ti-tab')" class="tablinksl">Technical
                                     Information</button>
                             </li>
                             <li>
                                 <!-- <a href="#first-c-section" class="info-tab-btn">Cientific Information</a> -->
-                                <button onclick="openInfo(event, 'ci-tab')" class="tablinks">Cientific
+                                <button onclick="openInfoTabs(event, 'ci-tab')" class="tablinksl">Cientific
                                     Information</button>
                             </li>
                         </ul>
@@ -218,21 +218,35 @@
 
     <script>
         function openInfo(evt, infoName) {
-            var i, tabcontent, tablinks, ulst;
+            var i, tabcontent, tablinks;
             tabcontent = document.getElementsByClassName("tabcontent");
             for (i = 0; i < tabcontent.length; i++) {
                 tabcontent[i].style.display = "none";
             }
             tablinks = document.getElementsByClassName("tablinks");
-            ulst = document.getElementsByClassName("ulst");
             for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
+                tablinks[i].className = tablinks[i].className.replace("active", "");
             }
             document.getElementById(infoName).style.display = "block";
-            evt.currentTarget.className += " active";
+            evt.currentTarget.className += "active";
         }
+        openInfo(event, 'gi-tab1');
+        
+        function openInfoTabs(evt, infoTab){
+            var i, ulst, tablinksl;
+            tablinksl = document.getElementsByClassName("tablinksl");
+            ulst = document.getElementsByClassName("ulst");
+            for (i = 0; i < ulst.length; i++) {
+                ulst[i].style.display = "none";
+            }
+            for (i = 0; i < tablinksl.length; i++) {
+                tablinksl[i].className = tablinksl[i].className.replace("active", "");
+                }
+            document.getElementById(infoTab).style.display = "block";
+            evt.currentTarget.className += "active";
+        }
+        openInfoTabs(event, 'gi-tab');
     </script>
-
 </body>
 
 </html>

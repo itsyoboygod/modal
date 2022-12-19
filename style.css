@@ -133,8 +133,8 @@ main button a{
     padding: 0;
 }
 
-ul .ulst{
-    display: none;
+.ulst{
+    /* display: none; */
 }
 
 .t li, .l li{
@@ -239,15 +239,9 @@ ul .ulst{
     transform: none;
 }
 
-.gi-tabcontent , .g-tablinks{
-    display: none;
-    padding: 5px;
-  }
-
 .info-tab-btn{
     text-decoration: none;
 }
-
 
 .t > * {
     margin: 0 10px !important;
@@ -279,9 +273,6 @@ ul .ulst{
     writing-mode: vertical-lr;
 }
 
-.r a{
-}
-
 .r a:first-child{
     border-top: solid 1px var(--color-right-arrows);
     border-bottom: solid 1px var(--color-right-arrows);
@@ -305,12 +296,6 @@ ul .ulst{
     backdrop-filter: blur(3px);
     transition: .2s;
 }
-
-/* input{
-    -webkit-appearance: none;
-    visibility: hidden;
-    display: none;
-} */
 
 #check:checked ~ main{
     transform: scale(1.2);
