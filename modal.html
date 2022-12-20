@@ -23,41 +23,41 @@
                         </form>
                     </div>
                     <div class="t">
-                        <ul id="ul-general" class="ulst" data-tabt="tabst">
+                        <ul id="general" class="ulst">
                             <li>
                                 <!-- <a href="#first-c-section" class="info-tab-btn">tab1</a> -->
-                                <button onclick="openInfo(event, 'gi-tab1')" class="tablinks">gi-tab1</button>
+                                <button onclick="openInfo(event, 'gi-tab1')" id="ttab1" class="tablinks">gi-tab1</button>
                             </li>
                             <li>
-                                <button onclick="openInfo(event, 'gi-tab2')" class="tablinks">gi-tab2</button>
+                                <button onclick="openInfo(event, 'gi-tab2')" id="ttab2" class="tablinks">gi-tab2</button>
 
                             </li>
                             <li>
-                                <button onclick="openInfo(event, 'gi-tab3')" class="tablinks">gi-tab3</button>
+                                <button onclick="openInfo(event, 'gi-tab3')" id="ttab2" class="tablinks">gi-tab3</button>
                             </li>
                         </ul>
-                        <ul id="ul-technical" class="ulst" data-tabt="tabst">
+                        <ul id="technical" class="ulst">
                             <li>
                                 <!-- <a href="#first-c-section" class="info-tab-btn">tab2</a> -->
-                                <button onclick="openInfo(event, 'ti-tab1')" class="tablinks">ti-tab1</button>
+                                <button onclick="openInfo(event, 'ti-tab1')" id="ttab4" class="tablinks">ti-tab1</button>
                             </li>
                             <li>
-                                <button onclick="openInfo(event, 'ti-tab2')" class="tablinks">ti-tab2</button>
+                                <button onclick="openInfo(event, 'ti-tab2')" id="ttab5" class="tablinks">ti-tab2</button>
                             </li>
                             <li>
-                                <button onclick="openInfo(event, 'ti-tab3')" class="tablinks">ti-tab3</button>
+                                <button onclick="openInfo(event, 'ti-tab3')" id="ttab6" class="tablinks">ti-tab3</button>
                             </li>
                         </ul>
-                        <ul id="ul-cientific" class="ulst" data-tabt="tabst">
+                        <ul id="cientific" class="ulst">
                             <li>
                                 <!-- <a href="#first-c-section" class="info-tab-btn">tab3</a> -->
-                                <button onclick="openInfo(event, 'ci-tab1')" class="tablinks">ci-tab1</button>
+                                <button onclick="openInfo(event, 'ci-tab1')" id="ttab7" class="tablinks">ci-tab1</button>
                             <li>
                             <li>
-                                <button onclick="openInfo(event, 'ci-tab2')" class="tablinks">ci-tab2</button>
+                                <button onclick="openInfo(event, 'ci-tab2')" id="ttab8" class="tablinks">ci-tab2</button>
                             </li>
                             <li>
-                                <button onclick="openInfo(event, 'ci-tab3')" class="tablinks">ci-tab3</button>
+                                <button onclick="openInfo(event, 'ci-tab3')" id="ttab9" class="tablinks">ci-tab3</button>
                             </li>
                         </ul>
                     </div>
@@ -68,124 +68,185 @@
                         <ul class="ulsl">
                             <li>
                                 <!-- <a href="#first-c-section" class="info-tab-btn">General Information</a> -->
-                                <button onclick="openInfoTabs(event, 'gi-tab')" class="tablinksl">General
+                                <button onclick="openInfoTabs(event, 'general')" class="tablinksl">General
                                     Information</button>
                             </li>
                             <li>
                                 <!-- <a href="#first-c-section" class="info-tab-btn">Technical Information</a> -->
-                                <button onclick="openInfoTabs(event, 'ti-tab')" class="tablinksl">Technical
+                                <button onclick="openInfoTabs(event, 'technical')" class="tablinksl">Technical
                                     Information</button>
                             </li>
                             <li>
                                 <!-- <a href="#first-c-section" class="info-tab-btn">Cientific Information</a> -->
-                                <button onclick="openInfoTabs(event, 'ci-tab')" class="tablinksl">Cientific
+                                <button onclick="openInfoTabs(event, 'cientific')" class="tablinksl">Cientific
                                     Information</button>
                             </li>
                         </ul>
                     </div>
                     <div class="c">
-                        <!-- <section id="first-c-section">
-                            <p>
-                                What is Lorem Ipsum?
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                when an unknown printer took a galley of type and scrambled it to make a type
-                                specimen book. It has survived not only five centuries,
-                                but also the leap into electronic typesetting, remaining essentially unchanged.
-                                It was popularised in the 1960s with the release of Letraset sheets containing
-                                Lorem Ipsum passages, and more recently with desktop publishing software like
-                                Aldus PageMaker including versions of Lorem Ipsum.
-                            </p>
-                        </section>
-                        <section id="second-c-section">
-                            <p>
-                                What is Lorem Ipsum?
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                when an unknown printer took a galley of type and scrambled it to make a type
-                                specimen book. It has survived not only five centuries,
-                                but also the leap into electronic typesetting, remaining essentially unchanged.
-                                It was popularised in the 1960s with the release of Letraset sheets containing
-                                Lorem Ipsum passages, and more recently with desktop publishing software like
-                                Aldus PageMaker including versions of Lorem Ipsum.
-                            </p>
-                        </section>
-                        <section id="third-c-section">
-                            <p>
-                                What is Lorem Ipsum?
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                when an unknown printer took a galley of type and scrambled it to make a type
-                                specimen book. It has survived not only five centuries,
-                                but also the leap into electronic typesetting, remaining essentially unchanged.
-                                It was popularised in the 1960s with the release of Letraset sheets containing
-                                Lorem Ipsum passages, and more recently with desktop publishing software like
-                                Aldus PageMaker including versions of Lorem Ipsum.
-                            </p>
-                        </section>
-                        <section id="fourth-c-section">
-                            <p>
-                                What is Lorem Ipsum?
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                when an unknown printer took a galley of type and scrambled it to make a type
-                                specimen book. It has survived not only five centuries,
-                                but also the leap into electronic typesetting, remaining essentially unchanged.
-                                It was popularised in the 1960s with the release of Letraset sheets containing
-                                Lorem Ipsum passages, and more recently with desktop publishing software like
-                                Aldus PageMaker including versions of Lorem Ipsum.
-                            </p>
-                        </section>
-                        <section id="fifth-c-section">
-                            <p>
-                                What is Lorem Ipsum?
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                when an unknown printer took a galley of type and scrambled it to make a type
-                                specimen book. It has survived not only five centuries,
-                                but also the leap into electronic typesetting, remaining essentially unchanged.
-                                It was popularised in the 1960s with the release of Letraset sheets containing
-                                Lorem Ipsum passages, and more recently with desktop publishing software like
-                                Aldus PageMaker including versions of Lorem Ipsum.
-                            </p>
-                        </section> -->
-
-
                         <div id="gi-tab1" class="tabcontent">
                             <h1>General Information Tab#1</h1>
+                            <section id="first-c-section">
+                                <p>
+                                    What is Lorem Ipsum?
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                    when an unknown printer took a galley of type and scrambled it to make a type
+                                    specimen book. It has survived not only five centuries,
+                                    but also the leap into electronic typesetting, remaining essentially unchanged.
+                                    It was popularised in the 1960s with the release of Letraset sheets containing
+                                    Lorem Ipsum passages, and more recently with desktop publishing software like
+                                    Aldus PageMaker including versions of Lorem Ipsum.
+                                </p><br>
+                                <p>
+                                    What is Lorem Ipsum?
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                    when an unknown printer took a galley of type and scrambled it to make a type
+                                    specimen book. It has survived not only five centuries,
+                                    but also the leap into electronic typesetting, remaining essentially unchanged.
+                                    It was popularised in the 1960s with the release of Letraset sheets containing
+                                    Lorem Ipsum passages, and more recently with desktop publishing software like
+                                    Aldus PageMaker including versions of Lorem Ipsum.
+                                </p>
+                            </section>
                         </div>
 
                         <div id="gi-tab2" class="tabcontent">
                             <h1>General Information Tab#2</h1>
+                             <section id="first-c-section">
+                                <p>
+                                    What is Lorem Ipsum?
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                    when an unknown printer took a galley of type and scrambled it to make a type
+                                    specimen book. It has survived not only five centuries,
+                                    but also the leap into electronic typesetting, remaining essentially unchanged.
+                                    It was popularised in the 1960s with the release of Letraset sheets containing
+                                    Lorem Ipsum passages, and more recently with desktop publishing software like
+                                    Aldus PageMaker including versions of Lorem Ipsum.
+                                </p>
+                            </section>
                         </div>
 
                         <div id="gi-tab3" class="tabcontent">
                             <h1>General Information Tab#3</h1>
+                            <section id="first-c-section">
+                                <p>
+                                    What is Lorem Ipsum?
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                    when an unknown printer took a galley of type and scrambled it to make a type
+                                    specimen book. It has survived not only five centuries,
+                                    but also the leap into electronic typesetting, remaining essentially unchanged.
+                                    It was popularised in the 1960s with the release of Letraset sheets containing
+                                    Lorem Ipsum passages, and more recently with desktop publishing software like
+                                    Aldus PageMaker including versions of Lorem Ipsum.
+                                </p>
+                            </section>
                         </div>
 
 
                         <div id="ti-tab1" class="tabcontent">
                             <h1>Technical Information Tab#1</h1>
+                            <section id="first-c-section">
+                                <p>
+                                    What is Lorem Ipsum?
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                    when an unknown printer took a galley of type and scrambled it to make a type
+                                    specimen book. It has survived not only five centuries,
+                                    but also the leap into electronic typesetting, remaining essentially unchanged.
+                                    It was popularised in the 1960s with the release of Letraset sheets containing
+                                    Lorem Ipsum passages, and more recently with desktop publishing software like
+                                    Aldus PageMaker including versions of Lorem Ipsum.
+                                </p>
+                            </section>
                         </div>
 
                         <div id="ti-tab2" class="tabcontent">
                             <h1>Technical Information Tab#2</h1>
+                            <section id="first-c-section">
+                                <p>
+                                    What is Lorem Ipsum?
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                    when an unknown printer took a galley of type and scrambled it to make a type
+                                    specimen book. It has survived not only five centuries,
+                                    but also the leap into electronic typesetting, remaining essentially unchanged.
+                                    It was popularised in the 1960s with the release of Letraset sheets containing
+                                    Lorem Ipsum passages, and more recently with desktop publishing software like
+                                    Aldus PageMaker including versions of Lorem Ipsum.
+                                </p>
+                            </section>
                         </div>
 
                         <div id="ti-tab3" class="tabcontent">
                             <h1>Technical Information Tab#3</h1>
+                            <section id="first-c-section">
+                                <p>
+                                    What is Lorem Ipsum?
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                    when an unknown printer took a galley of type and scrambled it to make a type
+                                    specimen book. It has survived not only five centuries,
+                                    but also the leap into electronic typesetting, remaining essentially unchanged.
+                                    It was popularised in the 1960s with the release of Letraset sheets containing
+                                    Lorem Ipsum passages, and more recently with desktop publishing software like
+                                    Aldus PageMaker including versions of Lorem Ipsum.
+                                </p>
+                            </section>
                         </div>
 
                         <div id="ci-tab1" class="tabcontent">
                             <h1>Cientific Information Tab#1</h1>
+                            <section id="first-c-section">
+                                <p>
+                                    What is Lorem Ipsum?
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                    when an unknown printer took a galley of type and scrambled it to make a type
+                                    specimen book. It has survived not only five centuries,
+                                    but also the leap into electronic typesetting, remaining essentially unchanged.
+                                    It was popularised in the 1960s with the release of Letraset sheets containing
+                                    Lorem Ipsum passages, and more recently with desktop publishing software like
+                                    Aldus PageMaker including versions of Lorem Ipsum.
+                                </p>
+                            </section>
                         </div>
 
                         <div id="ci-tab2" class="tabcontent">
                             <h1>Cientific Information Tab#2</h1>
+                            <section id="first-c-section">
+                                <p>
+                                    What is Lorem Ipsum?
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                    when an unknown printer took a galley of type and scrambled it to make a type
+                                    specimen book. It has survived not only five centuries,
+                                    but also the leap into electronic typesetting, remaining essentially unchanged.
+                                    It was popularised in the 1960s with the release of Letraset sheets containing
+                                    Lorem Ipsum passages, and more recently with desktop publishing software like
+                                    Aldus PageMaker including versions of Lorem Ipsum.
+                                </p>
+                            </section>
                         </div>
 
                         <div id="ci-tab3" class="tabcontent">
                             <h1>Cientific Information Tab#3</h1>
+                            <section id="first-c-section">
+                                <p>
+                                    What is Lorem Ipsum?
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                    when an unknown printer took a galley of type and scrambled it to make a type
+                                    specimen book. It has survived not only five centuries,
+                                    but also the leap into electronic typesetting, remaining essentially unchanged.
+                                    It was popularised in the 1960s with the release of Letraset sheets containing
+                                    Lorem Ipsum passages, and more recently with desktop publishing software like
+                                    Aldus PageMaker including versions of Lorem Ipsum.
+                                </p>
+                            </section>
                         </div>
 
                     </div>
@@ -216,37 +277,7 @@
             </button></h1>
     </main>
 
-    <script>
-        function openInfo(evt, infoName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace("active", "");
-            }
-            document.getElementById(infoName).style.display = "block";
-            evt.currentTarget.className += "active";
-        }
-        openInfo(event, 'gi-tab1');
-        
-        function openInfoTabs(evt, infoTab){
-            var i, ulst, tablinksl;
-            tablinksl = document.getElementsByClassName("tablinksl");
-            ulst = document.getElementsByClassName("ulst");
-            for (i = 0; i < ulst.length; i++) {
-                ulst[i].style.display = "none";
-            }
-            for (i = 0; i < tablinksl.length; i++) {
-                tablinksl[i].className = tablinksl[i].className.replace("active", "");
-                }
-            document.getElementById(infoTab).style.display = "block";
-            evt.currentTarget.className += "active";
-        }
-        openInfoTabs(event, 'gi-tab');
-    </script>
+    <script type="text/javascript" src="/tabs.js"></script>
 </body>
 
 </html>
